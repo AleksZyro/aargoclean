@@ -17,6 +17,8 @@ Open `index.html` directly in a browser or serve the folder with any static web 
 
 The current hero image is a temporary generated placeholder and should be replaced with an approved original company photo later. Service descriptions are intentionally broad and must be confirmed with the company before the final launch.
 
+The official company logo is stored unchanged at `assets/aargoclean-logo.jpg` and is used in the page header, footer and as the browser favicon.
+
 The website only links to `info@aargoclean.ch` through `mailto:`. No mail records, MX records, domain transfer or nameserver changes are part of this repository.
 
 The current website does not set cookies and does not include analytics, tracking, external maps, embedded videos or third-party fonts. If any of these are added later, `datenschutz.html` must be reviewed before deployment.
