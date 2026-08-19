@@ -474,6 +474,92 @@ h2 {
   border-radius: 50%;
 }
 
+.references[hidden] {
+  display: none;
+}
+
+.references {
+  background: var(--off-white);
+}
+
+.reference-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.reference-card {
+  overflow: hidden;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.reference-media {
+  aspect-ratio: 4 / 3;
+  display: grid;
+  place-items: center;
+  color: var(--teal-dark);
+  background: var(--mist);
+  border-bottom: 1px solid var(--line);
+}
+
+.reference-media img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.reference-media span {
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.reference-content {
+  padding: 26px;
+}
+
+.reference-type {
+  margin-bottom: 10px;
+  font-size: 0.76rem;
+  font-weight: 800;
+  color: var(--teal);
+  text-transform: uppercase;
+}
+
+.reference-content h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.reference-content > p:last-child {
+  margin-bottom: 0;
+  color: var(--ink-soft);
+}
+
+.testimonial {
+  max-width: 850px;
+  margin: 72px 0 0;
+  padding-left: 36px;
+  border-left: 4px solid var(--green);
+}
+
+.testimonial blockquote {
+  margin: 0;
+}
+
+.testimonial blockquote p {
+  margin-bottom: 18px;
+  font-size: 1.5rem;
+  line-height: 1.45;
+}
+
+.testimonial figcaption {
+  color: var(--ink-soft);
+}
+
 .contact {
   padding-block: 96px;
   color: var(--paper);
@@ -529,6 +615,109 @@ h2 {
 .site-footer {
   padding-top: 72px;
   background: var(--off-white);
+}
+
+.legal-page {
+  background: var(--paper);
+}
+
+.legal-hero {
+  color: var(--paper);
+  background: var(--teal-dark);
+}
+
+.legal-hero-inner {
+  padding-block: 80px;
+}
+
+.legal-hero h1 {
+  max-width: 850px;
+  margin-bottom: 14px;
+  font-size: 3.5rem;
+  line-height: 1.1;
+  overflow-wrap: anywhere;
+}
+
+.legal-hero p:last-child {
+  margin-bottom: 0;
+  color: #c7dbd7;
+}
+
+.legal-layout {
+  display: grid;
+  grid-template-columns: 250px minmax(0, 760px);
+  gap: 96px;
+  align-items: start;
+  padding-block: 88px 112px;
+}
+
+.legal-nav {
+  position: sticky;
+  top: calc(var(--header-height) + 28px);
+  display: grid;
+  gap: 10px;
+  padding: 24px 0;
+  color: var(--ink-soft);
+  border-top: 2px solid var(--ink);
+  border-bottom: 1px solid var(--line);
+}
+
+.legal-nav a {
+  text-decoration: none;
+}
+
+.legal-nav a:hover {
+  color: var(--teal);
+}
+
+.legal-nav strong,
+.legal-nav span {
+  display: block;
+}
+
+.legal-content section {
+  scroll-margin-top: calc(var(--header-height) + 32px);
+}
+
+.legal-content section + section {
+  padding-top: 42px;
+  margin-top: 42px;
+  border-top: 1px solid var(--line);
+}
+
+.legal-content h2 {
+  margin-bottom: 18px;
+  font-size: 1.65rem;
+}
+
+.legal-content p,
+.legal-content address {
+  color: var(--ink-soft);
+}
+
+.legal-content p:last-child {
+  margin-bottom: 0;
+}
+
+.legal-content address {
+  margin-bottom: 22px;
+  font-style: normal;
+}
+
+.legal-content a,
+.legal-footer a {
+  color: var(--teal-dark);
+}
+
+.legal-content code {
+  padding: 2px 5px;
+  font-size: 0.9em;
+  background: var(--mist);
+  border-radius: 3px;
+}
+
+.legal-footer {
+  padding-top: 0;
 }
 
 .footer-grid {
@@ -603,6 +792,23 @@ button:focus-visible {
 
   .process-list {
     gap: 26px;
+  }
+
+  .reference-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .reference-card:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .legal-layout {
+    grid-template-columns: 1fr;
+    gap: 46px;
+  }
+
+  .legal-nav {
+    position: static;
   }
 
   .contact-details {
@@ -720,6 +926,26 @@ button:focus-visible {
     gap: 40px;
   }
 
+  .reference-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .reference-card:last-child {
+    grid-column: auto;
+  }
+
+  .legal-hero-inner {
+    padding-block: 64px;
+  }
+
+  .legal-hero h1 {
+    font-size: 2.75rem;
+  }
+
+  .legal-layout {
+    padding-block: 64px 80px;
+  }
+
   .process-list li > span {
     margin-bottom: 24px;
   }
@@ -780,6 +1006,10 @@ button:focus-visible {
   .footer-bottom {
     flex-direction: column;
     gap: 4px;
+  }
+
+  .legal-hero h1 {
+    font-size: 1.9rem;
   }
 }
 
